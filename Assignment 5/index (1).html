@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./zebraStripe.css">
+    <title>ASSIGNMENT 5</title>
+</head>
+
+<body>
+    <div class="tan">
+        <h3>Table 1 </h3>
+        <table class="zebraStripe" border="1">
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Bounces</th>
+                </tr>
+            </thead>
+            <tbody class="zebraStripe">
+                <tr>
+                    <td>Tendai</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Kudzai</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>Taurai</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Nyika</td>
+                    <td>1000</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
+        <br>
+        <h3>Table 2 </h3>
+        <table class="zebraStripe" border="1">
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Favourite Dish</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+                <tr>
+                    <td>Tendai</td>
+                    <td>Sadza Madora</td>
+                </tr>
+                <tr>
+                    <td>Kudzai</td>
+                    <td>Sadza Chicken</td>
+                </tr>
+                <tr>
+                    <td>Taurai</td>
+                    <td>gago</td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="row">
+            <button id="zebra"> Change</button>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        let button = document.getElementById("zebra");
+        // listen for a click event on the button
+        button.addEventListener('click', () => {
+            var table_data = document.getElementsByTagName("table");
+            let number_of_tables = table_data.length;
+            // traversing through the tables
+            let table_index = 0;
+            while (table_index < number_of_tables) {
+                let table = table_data[table_index].getElementsByTagName('tr');
+                let row_count = 0;
+                for (row_count = 0; row_count < table.length; row_count += 2) {
+                    table[row_count].style.background = "black";
+                    table[row_count].style.color = "white";
+                }
+                // increment table index by 1
+                table_index++;
+            }
+
+
+
+        });
+    </script>
+</body>
+
+</html>

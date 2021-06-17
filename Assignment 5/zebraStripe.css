@@ -1,0 +1,25 @@
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.zebraStripe {
+    align-self: auto;
+    text-align: left;
+    margin: auto;
+    border: 1px solid blue;
+    margin-top: 16px;
+}
+
+button {
+    margin: auto;
+    margin-top: 7px;
+    font-size: 1.5em;
+    color: black;
+    background: rgb(219, 38, 38);
+}
+
+.tan {
+    background-color: white;
+}
